@@ -29,7 +29,7 @@ namespace BookListWeb.Model
         public DateTime? ModifiedDate { get; set; }
         [Display(Name = "Year Published", Order = 6), StringLength(4)]
         public string Year { get; set; }
-        [RegularExpression(@"^\d{10}(\d{3})?$")]
+        [RegularExpression(@"^\d{10}(\d{3})?$", ErrorMessage = "ISBN must be contain either 10 or 13 digits only")]
         public string ISBN { get; set; }
         [Display(Name = "# Pages")]
         public int? PageCount { get; set; }
