@@ -1,0 +1,5 @@
+﻿https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio
+
+
+https://docs.microsoft.com/en-us/aspnet/core/razor-pages/razor-pages-conventions?view=aspnetcore-3.1
+https://www.learnrazorpages.com/razor-pages/forms/file-upload
