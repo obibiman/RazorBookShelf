@@ -27,7 +27,7 @@ namespace BookListWeb.Pages.BookList
         public Book Book { get; set; }
 
         [BindProperty]
-        public IFormFile FileUpload { get; set; }
+        public IFormFile Photo { get; set; }
         public void OnGet()
         {
            

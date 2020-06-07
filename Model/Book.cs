@@ -46,6 +46,8 @@ namespace BookListWeb.Model
         public string SubTitle { get; set; }
         public byte[] Photo { get; set; }
         [Column(TypeName = "varchar(10)")]
+
+        public string PhotoPath { get; set; }         
         public string Edition { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }

@@ -13,7 +13,7 @@
                 <label asp-for="Book.Name"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Name" class="form-control" />
+                <input asp-for="Book.Name" class="form-control" placeholder="Book name or title"/>
             </div>
             <span asp-validation-for="Book.Name" />
         </div>
@@ -22,7 +22,7 @@
                 <label asp-for="Book.SubTitle"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.SubTitle" class="form-control" />
+                <input asp-for="Book.SubTitle" class="form-control" placeholder="Book subtitle"/>
             </div>
             <span asp-validation-for="Book.SubTitle" class="text-danger" />
         </div>

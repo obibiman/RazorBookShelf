@@ -7,6 +7,23 @@
 
 <h2 class="text-info">Create New Book</h2>
 <br />
+
+
+
+@*<div class="form-group row">
+    <form method="post" enctype="multipart/form-data" asp-action="Create">
+      
+        <div class="col-sm-10">
+            <div class="custom-file">
+                <label asp-for="Photo" class="col-form-label"></label>
+                <label class="custom-control-label">Click here to change photo...</label>
+                <input type="file" asp-for="Photo" class="form-control" />
+
+            </div>
+        </div>
+    </form>
+</div>*@
+
 <div class="border container" style="padding:30px;">
     <form method="post">
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
@@ -15,7 +32,7 @@
                 <label asp-for="Book.Name"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Name" class="form-control" />
+                <input asp-for="Book.Name" class="form-control"  placeholder="Book title or name"/>
             </div>
             <span asp-validation-for="Book.Name" />
         </div>
@@ -24,7 +41,7 @@
                 <label asp-for="Book.SubTitle"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.SubTitle" class="form-control" />
+                <input asp-for="Book.SubTitle" class="form-control" placeholder="Book subtitle" />
             </div>
             <span asp-validation-for="Book.SubTitle" class="text-danger" />
         </div>
@@ -33,7 +50,7 @@
                 <label asp-for="Book.Description"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Description" class="form-control" />
+                <input asp-for="Book.Description" class="form-control" placeholder="Book description" />
             </div>
             <span asp-validation-for="Book.Description" class="text-danger" />
         </div>
@@ -42,7 +59,7 @@
                 <label asp-for="Book.Author"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Author" class="form-control" />
+                <input asp-for="Book.Author" class="form-control" placeholder="Author(s)"/>
             </div>
             <span asp-validation-for="Book.Author" class="text-danger" />
         </div>
@@ -51,7 +68,7 @@
                 <label asp-for="Book.Price"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Price" class="form-control" />
+                <input asp-for="Book.Price" class="form-control" placeholder="Price"  />
             </div>
             <span asp-validation-for="Book.Price" class="text-danger" />
         </div>
@@ -60,7 +77,7 @@
                 <label asp-for="Book.ISBN"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.ISBN" class="form-control" />
+                <input asp-for="Book.ISBN" class="form-control" placeholder="International book standard number (ISBN)" />
             </div>
             <span asp-validation-for="Book.ISBN" class="text-danger" />
         </div>
@@ -69,7 +86,7 @@
                 <label asp-for="Book.Edition"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Edition" class="form-control" />
+                <input asp-for="Book.Edition" class="form-control" placeholder="Book edition" />
             </div>
         </div>
         <div class="form-group row">
@@ -77,7 +94,7 @@
                 <label asp-for="Book.Year"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Year" class="form-control" />
+                <input asp-for="Book.Year" class="form-control" placeholder="Publication year" />
             </div>
         </div>
         <div class="form-group row">
@@ -85,7 +102,7 @@
                 <label asp-for="Book.PageCount"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.PageCount" class="form-control" />
+                <input asp-for="Book.PageCount" class="form-control" placeholder="Number of pages" />
             </div>
         </div>
         <div class="form-group row">
@@ -93,7 +110,7 @@
                 <label asp-for="Book.Publisher"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Publisher" class="form-control" />
+                <input asp-for="Book.Publisher" class="form-control" placeholder="Publisher"/>
             </div>
         </div>
         <div class="form-group row">
@@ -101,7 +118,7 @@
                 <label asp-for="Book.Genre"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Genre" class="form-control" />
+                <input asp-for="Book.Genre" class="form-control" placeholder="Genre"/>
             </div>
         </div>
         <div class="form-group row">
@@ -109,7 +126,7 @@
                 <label asp-for="Book.Photo"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.Photo" class="form-control" />
+                <input asp-for="Book.Photo" class="form-control" placeholder="Front page photograph"/>
             </div>
         </div>
         <div class="form-group row">
@@ -117,7 +134,7 @@
                 <label asp-for="Book.CreatedBy"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Book.CreatedBy" class="form-control" />
+                <input asp-for="Book.CreatedBy" class="form-control" placeholder="Created by"/>
             </div>
             <span asp-validation-for="Book.CreatedBy" class="text-danger" />
         </div>
@@ -134,5 +151,5 @@
 
 @section Scripts
 {
-    <partial name="_ValidationScriptsPartial"/>
-             }
+    <partial name="_ValidationScriptsPartial" />
+}
