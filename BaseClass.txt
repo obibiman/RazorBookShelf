@@ -1,0 +1,23 @@
+  public class Genre : Commonbase
+    {
+		[Key]
+        public int Id { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        public string Genre { get; set; }    
+    }
+	
+	public class Commonbase
+    {
+		public string CreatedBy { get; set; }
+		[Required(ErrorMessage = "Created date is a required field")]
+		[Display(Order = 5, Name="Created Date")]
+		[DataType(DataType.Date)]
+		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+		public DateTime CreatedDate { get; set; }
+		[Display(Name = "Modified By")]
+		public string ModifiedBy { get; set; }
+		[Display(Name = "Modified Date", Order = 4)]
+		[DataType(DataType.Date)]
+		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+		public DateTime? ModifiedDate { get; set; }
+    }

@@ -1,0 +1,81 @@
+﻿    public class IndexModel : PageModel
+    {
+        private readonly ILogger<IndexModel> _logger;
+
+        public IndexModel(ILogger<IndexModel> logger)
+        {
+            _logger = logger;
+        }
+
+        [BindProperty]
+        public Employee Person { get; set; }
+        public IEnumerable<Employee> People { get; set; }
+
+        public void OnGet()
+        {
+            People = new List<Employee> {
+                new Employee { Id = 1, FirstName = "Mike" ,LastName = "Dayne" , MiddleName = "Asuquo"},
+                new Employee { Id = 2, FirstName = "Pete", LastName = "Rozelle" },
+                new Employee { Id = 3, FirstName = "Katy", LastName = "Dike" },
+                new Employee { Id = 4, FirstName = "Carl", LastName = "Osuji" , MiddleName = "Edward"},
+                new Employee { Id = 5, FirstName = "Gustavo",LastName = "DiMaria" },
+                new Employee { Id = 6, FirstName = "Blayne" ,LastName = "Smith" },
+                new Employee { Id = 7, FirstName = "Liz", LastName = "Fredrickson" , MiddleName = "Janet"},
+                new Employee { Id = 8, FirstName = "Gina" ,LastName = "Grinelle" },
+                new Employee { Id = 9, FirstName = "Zola" ,LastName = "Henderson" },
+                new Employee { Id = 10, FirstName = "Keenan", LastName = "Roberts" , MiddleName = "Asuquo"},
+                new Employee { Id = 11, FirstName = "Winston", LastName = "Copperton" },
+                 new Employee { Id = 12, FirstName = "Michelle", LastName = "Chen" },
+                  new Employee { Id = 13, FirstName = "Victoria", LastName = "Olumide" },
+                   new Employee { Id = 14, FirstName = "Keith", LastName = "Gonzales" },
+                    new Employee { Id = 16, FirstName = "Reed", LastName = "Granger" },
+                     new Employee { Id = 17, FirstName = "Ernest", LastName = "Landry" }
+            };
+            People = People.OrderBy(y => y.LastName);
+        }
+
+    }
+
+    ----------------------
+
+    @page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<select asp-for="Person" asp-items="@(new SelectList(Model.People, "Id", "FullName"))" class="dropdown-item-text">
+    <option value="" selected disabled>... Select One ...</option>
+</select>
+
+------------------
+
+   public class Employee
+    {
+        public int Id { get; set; }
+        public string FullName
+        {
+            get
+            {
+                var sb = new StringBuilder();
+                if (String.IsNullOrEmpty(MiddleName))
+                {
+                    sb.Append(FirstName).Append(" ").Append(LastName);
+                }
+                else
+                {
+                    sb.Append(FirstName).Append(" ").Append(MiddleName).Append(" ").Append(LastName);
+                }
+                return sb.ToString();
+                //return FirstName + " " + LastName;
+            }
+        }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MiddleName { get; set; }
+    }

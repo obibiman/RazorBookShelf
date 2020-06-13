@@ -30,7 +30,7 @@ namespace BookListWeb.Pages.BookList
         public IFormFile Photo { get; set; }
         public void OnGet()
         {
-           
+            var getData = "This is a string";
         }
 
         public async Task<IActionResult> OnPost()

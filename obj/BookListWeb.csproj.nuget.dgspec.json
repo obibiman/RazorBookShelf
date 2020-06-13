@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DevSource\\LowerOldRiver\\Westlab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj": {}
+    "C:\\Devsource\\LowerOldRiver\\WestLab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj": {}
   },
   "projects": {
-    "C:\\DevSource\\LowerOldRiver\\Westlab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj": {
+    "C:\\Devsource\\LowerOldRiver\\WestLab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DevSource\\LowerOldRiver\\Westlab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj",
+        "projectUniqueName": "C:\\Devsource\\LowerOldRiver\\WestLab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj",
         "projectName": "BookListWeb",
-        "projectPath": "C:\\DevSource\\LowerOldRiver\\Westlab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj",
+        "projectPath": "C:\\Devsource\\LowerOldRiver\\WestLab\\RazorSolutions\\BookListApp\\BookListWeb\\BookListWeb.csproj",
         "packagesPath": "C:\\Users\\Maurice\\.nuget\\packages\\",
-        "outputPath": "C:\\DevSource\\LowerOldRiver\\Westlab\\RazorSolutions\\BookListApp\\BookListWeb\\obj\\",
+        "outputPath": "C:\\Devsource\\LowerOldRiver\\WestLab\\RazorSolutions\\BookListApp\\BookListWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

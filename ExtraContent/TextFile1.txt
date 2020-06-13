@@ -1,0 +1,49 @@
+﻿public class Author
+{
+    public int AuthorId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public ICollection<Book> Books { get; set; }
+}
+public class Book
+{
+    public int BookId { get; set; }
+    public string Title { get; set; }
+    public Author Author { get; set; }
+    public int AuthorFK { get; set; }
+}
+
+public class Book
+{
+    public int BookId { get; set; }
+    public string Title { get; set; }
+    public Author Author { get; set; }
+    [ForeignKey("Author")]
+    public int AuthorFK { get; set; }
+}
+public class Book
+{
+    public int BookId { get; set; }
+    public string Title { get; set; }
+    [ForeignKey("AuthorFK")]
+    public Author Author { get; set; }
+    public int AuthorFK { get; set; }
+}
+public class Author
+{
+    public int AuthorId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    [ForeignKey("AuthorFK")]
+    public ICollection<Book> Books { get; set; }
+}
+public class SampleContext : DbContext
+{
+    public DbSet<Author> Authors { get; set; }
+    public DbSet<Book> Books { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Book>()
+            .HasForeignKey(p => p.AuthorFK);
+    }
+}
