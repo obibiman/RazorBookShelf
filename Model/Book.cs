@@ -35,5 +35,8 @@ namespace BookListWeb.Model
         [Column(TypeName = "varchar(15)"), Display(Name = "Edition")]
         public string Edition { get; set; }
         public ICollection<BookAuthor> BookAuthors { get; set; }
+        [ForeignKey(nameof(BookGenreId))]
+        public int BookGenreId { get; set; }     
+        public BookGenre BookGenre { get; set; }
     }
 }
