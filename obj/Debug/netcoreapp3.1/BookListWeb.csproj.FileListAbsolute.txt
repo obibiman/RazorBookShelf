@@ -417,3 +417,4 @@ C:\DevSource\LowerOldRiver\Westlab\RazorSolutions\BookListApp\BookListWeb\obj\De
 C:\DevSource\LowerOldRiver\Westlab\RazorSolutions\BookListApp\BookListWeb\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Create.cshtml.g.cs
 C:\DevSource\LowerOldRiver\Westlab\RazorSolutions\BookListApp\BookListWeb\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Edit.cshtml.g.cs
 C:\DevSource\LowerOldRiver\Westlab\RazorSolutions\BookListApp\BookListWeb\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Detail.cshtml.g.cs
+C:\Devsource\LowerOldRiver\WestLab\RazorSolutions\BookListApp\BookListWeb\obj\Debug\netcoreapp3.1\BookListWeb.csprojAssemblyReference.cache

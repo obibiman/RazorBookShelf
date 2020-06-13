@@ -7,7 +7,7 @@ namespace BookListWeb.Model
     {
         [Key]
         public int Id { get; set; }
-        [Column(TypeName = "varchar(20)")]
+        [Display(Name = "Genre"), MaxLength(20), DataType(DataType.Text), Column(TypeName = "varchar(20)")]
         public string Genre { get; set; }
     }
 }
