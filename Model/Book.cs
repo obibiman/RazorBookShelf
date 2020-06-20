@@ -16,7 +16,7 @@ namespace BookListWeb.Model
         public string  Author { get; set; }
         [Display(Name = "Publication Year"), MaxLength(4), DataType(DataType.Text), Column(TypeName = "varchar(4)")]
         public string Year { get; set; }
-        [RegularExpression(@"^\d{10}(\d{3})?$", ErrorMessage = "ISBN must be contain either 10 or 13 digits only")]
+        [RegularExpression(@"^\d{10}(\d{3})?$", ErrorMessage = "ISBN must be exactly either 10 or 13 digits only")]
         public string ISBN { get; set; }
         [Display(Name = "# Pages")]
         public int? PageCount { get; set; }

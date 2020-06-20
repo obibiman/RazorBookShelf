@@ -18,6 +18,11 @@ namespace BookListWeb.Model
         [Display(Name = "Middle Name", Order = 3), MaxLength(100), DataType(DataType.Text), Column(TypeName = "varchar(100)")]
         public string MiddleName { get; set; }
         public ICollection<BookAuthor> BookAuthors { get; set; }
+        [NotMapped, Display(Name = "Full Name")]
+        public string FullName
+        {
+            get { return FirstName + " " + MiddleName ?? " " + LastName; }
+        }
     }
 }
 
