@@ -28,9 +28,21 @@ namespace BookListWeb.Pages.BookList
 
         [BindProperty]
         public IFormFile Photo { get; set; }
+
+        public IEnumerable<BookGenre> Genres { get; set; }
+
         public void OnGet()
         {
-           
+            Genres = new List<BookGenre> {
+                new BookGenre { Id = 1, GenreName="Programming" },
+                new BookGenre { Id = 2, GenreName="Database" },
+                new BookGenre { Id = 3, GenreName=".NET Core" },
+                new BookGenre { Id = 4, GenreName="Java" },
+                new BookGenre { Id = 5, GenreName="Fiction" },
+                new BookGenre { Id = 6, GenreName="Cloud" },
+                new BookGenre { Id = 7, GenreName="Csharp" },
+                new BookGenre { Id = 8, GenreName="Messaging" }
+            };
         }
 
         public async Task<IActionResult> OnPost()
