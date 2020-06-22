@@ -118,8 +118,8 @@
                 <label asp-for="Book.Genre"></label>
             </div>
             <div class="col-6">
-                <select class="dropdown" asp-for="Book.Genre" asp-items="@(new SelectList(Model.Genres, "Id", "GenreName"))">
-                    <option value="">...Pick one...</option>
+                <select class="dropdown-item-text" asp-for="Book.Genre" asp-items="@(new SelectList(Model.Genres, "Id", "GenreName"))">
+                    <option value="" selected disabled>...Pick one...</option>
                 </select>
             </div>
             @*<div class="col-6">
